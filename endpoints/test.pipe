@@ -1,0 +1,12 @@
+VERSION 1
+
+TOKEN read_token READ
+
+NODE endpoint
+SQL >
+
+    SELECT
+        count(new_col)
+    FROM events
+
+
