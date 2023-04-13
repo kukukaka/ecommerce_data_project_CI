@@ -9,5 +9,5 @@ SQL >
         product,
         JSONExtractFloat(json, 'price') as price
     FROM events
-    where action = 'buy'
+    where action = 'search'
     ORDER BY price DESC
