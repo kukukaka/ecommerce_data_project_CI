@@ -1,1 +1,1 @@
-tb push --push-deps --only-changes --force --populate --wait
+tb push --push-deps --only-changes --force --populate --wait --yes

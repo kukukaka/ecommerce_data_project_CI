@@ -8,7 +8,7 @@ SQL >
         product,
         color,
         JSONExtractFloat(json, 'price') as price,
-        new_col
+        new_col2
     FROM events
     LEFT JOIN products ON product = id
     where action = 'buy'
@@ -22,7 +22,7 @@ DESCRIPTION >
 SQL >
 
     %
-        select date, sum(price) total_sales
+        select date, sum(price) total_sales, new_col2
         from only_buy_events
         where color in {{Array(colors, 'black')}}
         group by date
