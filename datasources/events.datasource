@@ -1,3 +1,6 @@
+VERSION 1
+
+
 DESCRIPTION >
     this contains all the events produced by Kafka, there are 4 fixed columns 
     plus a `json` column which contains the rest of the data for that event.
@@ -9,7 +12,7 @@ SCHEMA >
     `user_id` String,
     `action` String,
     `json` String
-    
+
 ENGINE "MergeTree"
 ENGINE_PARTITION_KEY "toYear(timestamp)"
 ENGINE_SORTING_KEY "timestamp"
