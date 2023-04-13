@@ -7,7 +7,8 @@ SQL >
         toDate(timestamp) date,
         product,
         color,
-        JSONExtractFloat(json, 'price') as price
+        JSONExtractFloat(json, 'price') as price,
+        new_col
     FROM events
     LEFT JOIN products ON product = id
     where action = 'buy'
