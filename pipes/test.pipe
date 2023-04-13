@@ -1,0 +1,13 @@
+NODE buy_by_price
+DESCRIPTION >
+    filters all the buy events
+
+SQL >
+
+    SELECT
+        date,
+        product,
+        JSONExtractFloat(json, 'price') as price
+    FROM events
+    where action = 'buy'
+    ORDER BY price DESC
