@@ -5,7 +5,7 @@ DESCRIPTION >
 SQL >
 
     SELECT
-        date,
+        toDate(timestamp) date,
         product,
         JSONExtractFloat(json, 'price') as price
     FROM events
