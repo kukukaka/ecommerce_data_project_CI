@@ -22,7 +22,7 @@ DESCRIPTION >
 SQL >
 
     %
-        select date, sum(price) total_sales, new_col2
+        select date, sum(price) total_sales
         from only_buy_events
         where color in {{Array(colors, 'black')}}
         group by date
