@@ -7,7 +7,8 @@ SQL >
     SELECT
         toDate(timestamp) date,
         product,
-        JSONExtractFloat(json, 'price') as price
+        JSONExtractFloat(json, 'price') as price,
+        user_id
     FROM events
-    where action = 'search'
-    ORDER BY price DESC
+    where action = 'buy'
+    ORDER BY price ASC
