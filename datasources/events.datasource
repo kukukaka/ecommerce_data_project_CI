@@ -10,7 +10,7 @@ SCHEMA >
     `action` String,
     `json` String,
     `new_col` String,
-    `new_col2` String,
+    `new_col2` String
 
 ENGINE "MergeTree"
 ENGINE_PARTITION_KEY "toYear(timestamp)"
